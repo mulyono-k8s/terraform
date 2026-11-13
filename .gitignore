@@ -2,3 +2,7 @@
 # *.tfstate
 # *.tfstate.*
 crash.log
+kind-kluster-multinode-config
+terraform.tfstate.d/
+*.tfstate*
+.terraform/
