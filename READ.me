@@ -32,3 +32,10 @@ terrafomrm apply
 git config --global user.email "miha.mulyono@gmail.com"
 git config --global user.name "Mulyono"
 git config --global --list
+
+## Cara memasukan file .ignore mengabaikan file di local
+echo "kind-kluster-multinode-config" >> .gitignore
+echo "terraform.tfstate.d/" >> .gitignore
+echo "*.tfstate*" >> .gitignore
+echo ".terraform/" >> .gitignore
+git rm --cached kind-kluster-multinode-config
