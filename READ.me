@@ -11,3 +11,21 @@ b. terraform plan
 Proses: Terraform akan menganalisis klaster Docker Desktop Anda dan menampilkan simulasi: "3 resources to add" (Namespace, Deployment, Service).
 c. terraform apply -auto-approve
 Proses: Terraform mengeksekusi kode dan aplikasi langsung menyala di klaster k8s lokal Anda.
+
+## Install terraform jika windows tidak Anda
+1. https://developer.hashicorp.com/terraform/install
+2. Kemudian di extrak contoh saya letakan di partisi c
+3. Buka system env variable klik env variable kemudia 
+letakan C:\terraform_1.17.2_windows_amd64 di kotak bawah system variable
+4. JIka jalankan terraform -version belum bija maka jalankan
+echo 'export PATH="$PATH:/c/terraform_1.17.2_windows_amd64"' >> ~/.bashrc
+source ~/.bashrc
+terraform -version
+5. jalankan 
+terraform init
+terraform workspace new kantor  <-- pakai laptop kantor
+terraform workspace list
+terraform plan
+terrafomrm apply
+
+
