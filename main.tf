@@ -17,7 +17,8 @@ resource "kind_cluster" "primary" {
 
     node { role = "control-plane" }
     node { role = "worker" }
-  
+    node { role = "worker" }
+    node { role = "worker" }
   }
 }
 
